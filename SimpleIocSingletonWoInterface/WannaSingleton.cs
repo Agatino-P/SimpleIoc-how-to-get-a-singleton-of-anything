@@ -8,9 +8,15 @@ namespace SimpleIocSingletonWoInterface
 {
     public class WannaSingleton : IWannaSingleton
     {
-        public WannaSingleton() 
+        public WannaSingleton()
         {
-            Debug.WriteLine($"constructor {DateTime.Now}");
+           "Within WannaSingleton Constructor".DP();
         }
+
+            public void PrintToDebug(string text)
+        {
+            $"Inside WannaSingleton Method - {text}".DP();
+        }
+
     }
 }

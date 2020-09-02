@@ -65,7 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="IParametricConstructor.cs" />
     <Compile Include="IWannaSingleton.cs" />
+    <Compile Include="ParametricConstructor.cs" />
+    <Compile Include="StringTimedDebug.cs" />
     <Compile Include="WannaSingleton.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

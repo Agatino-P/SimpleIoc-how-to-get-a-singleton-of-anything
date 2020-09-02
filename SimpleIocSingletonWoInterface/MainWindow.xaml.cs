@@ -29,8 +29,9 @@ namespace SimpleIocSingletonWoInterface
 
         private void tstButton_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine($"Button {DateTime.Now}");
-            IWannaSingleton iws1 = SimpleIoc.Default.GetInstance<IWannaSingleton>();
+            "Within Button Click".DP();
+            IWannaSingleton iws = SimpleIoc.Default.GetInstance<IWannaSingleton>();
+            iws.PrintToDebug("Invoked from button");
 
         }
     }

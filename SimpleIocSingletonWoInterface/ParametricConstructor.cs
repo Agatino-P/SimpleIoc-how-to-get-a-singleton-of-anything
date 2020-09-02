@@ -5,8 +5,11 @@ using System.Text;
 
 namespace SimpleIocSingletonWoInterface
 {
-    public interface IWannaSingleton
+    public class ParametricConstructor : IParametricConstructor
     {
-        void PrintToDebug( string text);
+        public ParametricConstructor(string text)
+        {
+
+        }
     }
 }
