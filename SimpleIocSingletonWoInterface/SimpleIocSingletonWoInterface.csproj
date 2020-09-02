@@ -65,10 +65,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AbstractBaseClass.cs" />
+    <Compile Include="AbstractBasedRepository1.cs" />
+    <Compile Include="AbstractBasedRepository2.cs" />
+    <Compile Include="Derived1.cs" />
+    <Compile Include="Derived2.cs" />
     <Compile Include="Entity1.cs" />
     <Compile Include="Entity2.cs" />
     <Compile Include="DummyGeneric.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="IAbstractBasedRepository.cs" />
     <Compile Include="IParametricConstructor.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IWannaSingleton.cs" />

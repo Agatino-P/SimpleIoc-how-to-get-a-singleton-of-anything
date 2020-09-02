@@ -15,6 +15,9 @@
         <Button x:Name="tstButton3" Width="200" Height="100 "
                 HorizontalAlignment="Center" VerticalAlignment="Center"
                 Click="tstButton3_Click" Content="Generic Interface 1" />
+        <Button x:Name="tstButton4" Width="200" Height="100 "
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Click="tstButton4_Click" Content="Generic AbstractBase" />
 
     </UniformGrid>
 </Window>

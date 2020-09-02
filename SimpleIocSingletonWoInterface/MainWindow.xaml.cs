@@ -25,9 +25,14 @@ namespace SimpleIocSingletonWoInterface
         {
             InitializeComponent();
             SimpleIoc.Default.Register<IWannaSingleton>(() => new WannaSingleton());
+
             SimpleIoc.Default.Register<IParametricConstructor>(() => new ParametricConstructor(DateTime.Now.ToString()));
+
             SimpleIoc.Default.Register<IRepository<Entity1, IEntity>>(() => new Repository1("Repository1<Entity1>"));
             SimpleIoc.Default.Register<IRepository<Entity2, IEntity>>(() => new Repository2("Repository2<Entity2>"));
+
+            SimpleIoc.Default.Register< IAbstractBasedRepository<Derived1>>(() => new AbstractBasedRepository1());
+            SimpleIoc.Default.Register< IAbstractBasedRepository<Derived2>>(() => new AbstractBasedRepository2());
         }
 
         private void tstButton1_Click(object sender, RoutedEventArgs e)
@@ -46,8 +51,16 @@ namespace SimpleIocSingletonWoInterface
         private void tstButton3_Click(object sender, RoutedEventArgs e)
         {
             IRepository < Entity1,IEntity > rep1 = SimpleIoc.Default.GetInstance<IRepository<Entity1, IEntity>>();
-                IRepository<Entity2, IEntity> rep2 = SimpleIoc.Default.GetInstance<IRepository<Entity2, IEntity>>();
-                
+            IRepository<Entity2, IEntity> rep2 = SimpleIoc.Default.GetInstance<IRepository<Entity2, IEntity>>();
+        }
+
+        private void tstButton4_Click(object sender, RoutedEventArgs e)
+        {
+            IAbstractBasedRepository<Derived1> abr1 = SimpleIoc.Default.GetInstance<IAbstractBasedRepository<Derived1>>();
+            abr1.TestMethod("uno");
+            IAbstractBasedRepository<Derived2> abr2 = SimpleIoc.Default.GetInstance<IAbstractBasedRepository<Derived2>>();
+            abr2.TestMethod("due");
+
         }
     }
 }
