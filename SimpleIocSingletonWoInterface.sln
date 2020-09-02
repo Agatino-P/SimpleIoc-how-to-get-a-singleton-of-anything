@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIocSingletonWoInterface", "SimpleIocSingletonWoInterface\SimpleIocSingletonWoInterface.csproj", "{BA7AA71F-E5E8-4DFC-9234-7CC8A95591EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA7AA71F-E5E8-4DFC-9234-7CC8A95591EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7AA71F-E5E8-4DFC-9234-7CC8A95591EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7AA71F-E5E8-4DFC-9234-7CC8A95591EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7AA71F-E5E8-4DFC-9234-7CC8A95591EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47719AEA-5159-438A-A336-BD6F1B84D9EE}
+	EndGlobalSection
+EndGlobal
