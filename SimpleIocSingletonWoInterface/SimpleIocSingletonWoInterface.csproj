@@ -65,9 +65,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entity1.cs" />
+    <Compile Include="Entity2.cs" />
+    <Compile Include="DummyGeneric.cs" />
+    <Compile Include="IEntity.cs" />
     <Compile Include="IParametricConstructor.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="IWannaSingleton.cs" />
     <Compile Include="ParametricConstructor.cs" />
+    <Compile Include="Repository1.cs" />
+    <Compile Include="Repository2.cs" />
     <Compile Include="StringTimedDebug.cs" />
     <Compile Include="WannaSingleton.cs" />
     <Page Include="MainWindow.xaml">

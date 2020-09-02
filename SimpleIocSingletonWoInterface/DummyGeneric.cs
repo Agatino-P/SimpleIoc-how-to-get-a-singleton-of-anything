@@ -5,11 +5,12 @@ using System.Text;
 
 namespace SimpleIocSingletonWoInterface
 {
-    public class ParametricConstructor : IParametricConstructor
+    public class DummyGeneric<T, I> where T: I
     {
-        public ParametricConstructor(string text)
+        public DummyGeneric(string text)
         {
-            $"Parametric constructo: {text}".DP();
+            typeof(T).ToString().DP();
+            text.DP();
         }
     }
 }

@@ -24,15 +24,30 @@ namespace SimpleIocSingletonWoInterface
         public MainWindow()
         {
             InitializeComponent();
-            SimpleIoc.Default.Register<IWannaSingleton>( ()=> new WannaSingleton() );
+            SimpleIoc.Default.Register<IWannaSingleton>(() => new WannaSingleton());
+            SimpleIoc.Default.Register<IParametricConstructor>(() => new ParametricConstructor(DateTime.Now.ToString()));
+            SimpleIoc.Default.Register<IRepository<Entity1, IEntity>>(() => new Repository1("Repository1<Entity1>"));
+            SimpleIoc.Default.Register<IRepository<Entity2, IEntity>>(() => new Repository2("Repository2<Entity2>"));
         }
 
-        private void tstButton_Click(object sender, RoutedEventArgs e)
+        private void tstButton1_Click(object sender, RoutedEventArgs e)
         {
-            "Within Button Click".DP();
+            "Within Button 1 Click".DP();
             IWannaSingleton iws = SimpleIoc.Default.GetInstance<IWannaSingleton>();
             iws.PrintToDebug("Invoked from button");
+        }
 
+        private void tstButton2_Click(object sender, RoutedEventArgs e)
+        {
+            "Within Button 2 Click".DP();
+            IParametricConstructor ipc = SimpleIoc.Default.GetInstance<IParametricConstructor>();
+        }
+
+        private void tstButton3_Click(object sender, RoutedEventArgs e)
+        {
+            IRepository < Entity1,IEntity > rep1 = SimpleIoc.Default.GetInstance<IRepository<Entity1, IEntity>>();
+                IRepository<Entity2, IEntity> rep2 = SimpleIoc.Default.GetInstance<IRepository<Entity2, IEntity>>();
+                
         }
     }
 }
