@@ -74,6 +74,7 @@
     <Compile Include="Entity1.cs" />
     <Compile Include="Entity2.cs" />
     <Compile Include="DummyGeneric.cs" />
+    <Compile Include="GenericFunctionRepository.cs" />
     <Compile Include="IFunctionRepository.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="IAbstractBasedRepository.cs" />

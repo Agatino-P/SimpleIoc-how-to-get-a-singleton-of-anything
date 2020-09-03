@@ -23,6 +23,7 @@ namespace SimpleIocSingletonWoInterface
             SimpleIoc.Default.Register<IAbstractBasedRepository<Derived2>>(() => new AbstractBasedRepository2());
 
             SimpleIoc.Default.Register<IFunctionRepository<Entity1>>(() => new FunctionRepository1((i, t) => new Entity1(i, t)));
+            SimpleIoc.Default.Register<IFunctionRepository<Entity2>>(() => new GenericFunctionRepository<Entity2>((i, t) => new Entity2(i, t)));
         }
 
         private void tstButton1_Click(object sender, RoutedEventArgs e)
@@ -57,6 +58,8 @@ namespace SimpleIocSingletonWoInterface
         {
             IFunctionRepository<Entity1> fr1 = SimpleIoc.Default.GetInstance<IFunctionRepository<Entity1>>();
             fr1.Add("frI1", "frT1");
+            IFunctionRepository<Entity2> gfr2 = SimpleIoc.Default.GetInstance<IFunctionRepository<Entity2>>();
+            gfr2.Add("gfrI2", "gfrT2");
         }
     }
 }
