@@ -1,18 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SimpleIocSingletonWoInterface
 {
@@ -31,8 +19,10 @@ namespace SimpleIocSingletonWoInterface
             SimpleIoc.Default.Register<IRepository<Entity1, IEntity>>(() => new Repository1("Repository1<Entity1>"));
             SimpleIoc.Default.Register<IRepository<Entity2, IEntity>>(() => new Repository2("Repository2<Entity2>"));
 
-            SimpleIoc.Default.Register< IAbstractBasedRepository<Derived1>>(() => new AbstractBasedRepository1());
-            SimpleIoc.Default.Register< IAbstractBasedRepository<Derived2>>(() => new AbstractBasedRepository2());
+            SimpleIoc.Default.Register<IAbstractBasedRepository<Derived1>>(() => new AbstractBasedRepository1());
+            SimpleIoc.Default.Register<IAbstractBasedRepository<Derived2>>(() => new AbstractBasedRepository2());
+
+            SimpleIoc.Default.Register<IFunctionRepository<Entity1>>(() => new FunctionRepository1((i, t) => new Entity1(i, t)));
         }
 
         private void tstButton1_Click(object sender, RoutedEventArgs e)
@@ -50,7 +40,7 @@ namespace SimpleIocSingletonWoInterface
 
         private void tstButton3_Click(object sender, RoutedEventArgs e)
         {
-            IRepository < Entity1,IEntity > rep1 = SimpleIoc.Default.GetInstance<IRepository<Entity1, IEntity>>();
+            IRepository<Entity1, IEntity> rep1 = SimpleIoc.Default.GetInstance<IRepository<Entity1, IEntity>>();
             IRepository<Entity2, IEntity> rep2 = SimpleIoc.Default.GetInstance<IRepository<Entity2, IEntity>>();
         }
 
@@ -61,6 +51,12 @@ namespace SimpleIocSingletonWoInterface
             IAbstractBasedRepository<Derived2> abr2 = SimpleIoc.Default.GetInstance<IAbstractBasedRepository<Derived2>>();
             abr2.TestMethod("due");
 
+        }
+
+        private void tstButton5_Click(object sender, RoutedEventArgs e)
+        {
+            IFunctionRepository<Entity1> fr1 = SimpleIoc.Default.GetInstance<IFunctionRepository<Entity1>>();
+            fr1.Add("frI1", "frT1");
         }
     }
 }

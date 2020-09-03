@@ -68,11 +68,13 @@
     <Compile Include="AbstractBaseClass.cs" />
     <Compile Include="AbstractBasedRepository1.cs" />
     <Compile Include="AbstractBasedRepository2.cs" />
+    <Compile Include="FunctionRepository1.cs" />
     <Compile Include="Derived1.cs" />
     <Compile Include="Derived2.cs" />
     <Compile Include="Entity1.cs" />
     <Compile Include="Entity2.cs" />
     <Compile Include="DummyGeneric.cs" />
+    <Compile Include="IFunctionRepository.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="IAbstractBasedRepository.cs" />
     <Compile Include="IParametricConstructor.cs" />
